@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Map | Muslim Innovators Hub</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css.css" />
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <h2>🌙 Innovators</h2>
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="map.html" class="active">🗺️ Map</a>
+        <a href="chatbot.html">🤖 Chatbot</a>
+        <a href="about.html">ℹ️ About</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>Scholars Map</h1>
+      <input type="search" id="searchInput" placeholder="Search by name, era, or category..." />
+      <div class="map-and-details">
+        <div id="map"></div>
+        <div id="scholarDetails" class="hidden">
+          <button id="backBtn">← Back</button>
+          <h2 id="scholarName"></h2>
+          <p><strong>Era:</strong> <span id="scholarEra"></span></p>
+          <p><strong>Category:</strong> <span id="scholarCategory"></span></p>
+          <p id="scholarBio"></p>
+          <div id="scholarFacts"></div>
+          <p id="scholarFact"></p>
+          <audio id="scholarAudio" controls></audio>
+        </div>
+        
+        <!-- Scholar Details Panel -->
+        <div id="scholarDetails" class="hidden">
+          <button id="backBtn" class="back-button">Back</button>
+          <h2 id="scholarName"></h2>
+          <p><strong>Era:</strong> <span id="scholarEra"></span></p>
+          <p><strong>Field:</strong> <span id="scholarCategory"></span></p>
+          <div class="basic-facts" id="scholarFacts"></div>
+          <p id="scholarBio"></p>
+          <p><strong>Interesting Fact:</strong> <span id="scholarFact"></span></p>
+          <audio controls id="scholarAudio"></audio>
+          <div class="button-group">
+            <button class="btn" onclick="learnMore()">Learn More</button>
+            <button class="btn" onclick="startQuiz()">Take Quiz</button>
+          </div>
+        </div>       
+      </div>
+    </main>
+    <!-- Sidebar for scholar info -->
+  </div>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+  <!-- Your Map Logic -->
+  <script src="js.js"></script>
+
+
+</body>
+</html>
+
